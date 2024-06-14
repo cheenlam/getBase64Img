@@ -62,9 +62,10 @@
                                 // base64碼反轉還原
                                 const reversedData = base64Data.split('').reverse().join('');
                                 return `data:image/${suffix};base64,${reversedData}`;
-
+                                // data:image/jpeg;base64,
                             }else{
-                                return base64Data;
+                                const split = base64Data.split('.');
+                                return `data:image/${split[0]};base64,${split[1]}`;
                             }      
                         })
                         .catch(error => {
