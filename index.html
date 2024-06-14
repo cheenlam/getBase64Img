@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.js"></script>
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- cardList -->
+        <div class="cardList">
+            <div class="card" v-for="(item,index) in list" :key="index">
+                <label>
+                    <div class="cardImg">
+                        <img :src="item.base64" loading="lazy" v-if="item.ckimg">
+                    </div>
+                    <div class="txt">
+                        <p>{{ item.name }}</p>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const { createApp, ref, onMounted } = Vue;
+        createApp({
+            setup() {
+                const list = ref([]);
+
+                async function getData() {
+                    list.value = []; 
+                    const res = await axios.get("json/list.json");
+                    
+                    list.value = res.data;
+                    for(let i of list.value){
+                        i.base64 = await convertImg(i.src , i.reversal);
+                        i.ckimg = true;
+                    } 
+                }
+
+                async function convertImg(fileUrl , reversal) {
+                    return fetch(fileUrl)
+                        .then(response => response.text())
+                        .then(base64Data => {
+                            if(reversal){
+                                // const index = base64Data.indexOf('base64,');
+                                // const reversedPart = base64Data.substr(index + 'base64,'.length).split('').reverse().join('');
+                                // const reversedData = base64Data.substr(0, index + 'base64,'.length) + reversedPart;
+                                // return reversedData;
+
+                                // const reversedData = reverse(reversal);
+                                // const decodedData = atob(reversedData);
+
+                                // 副檔名
+                                const suffix = fileUrl.match(/\.([^.]+)$/)[1];
+                                // base64碼反轉還原
+                                const reversedData = base64Data.split('').reverse().join('');
+                                return `data:image/${suffix};base64,${reversedData}`;
+
+                            }else{
+                                return base64Data;
+                            }      
+                        })
+                        .catch(error => {
+                            return '';
+                        });
+                }
+
+                onMounted(() => {
+                    getData();
+                });
+                return {
+                    list,
+                    getData,
+                    convertImg
+
+                };
+            },
+        }).mount("#app");
+    </script>
+
+</body>
+
+</html>

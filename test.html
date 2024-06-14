@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="base64Image" />
+
+    <script>
+        // const fileUrl = 'https://api4.hitvdemo.com/upload/image/JUQ774_reversal.jpg';
+        const fileUrl = 'test_01.jpg';
+        fetch(fileUrl)
+            .then(response => {
+                return response.text(); 
+            })
+            .then(base64Data => {
+                const index = base64Data.indexOf('base64,');
+                const reversedPart = base64Data.substr(index + 'base64,'.length).split('').reverse().join('');
+                const reversedData = base64Data.substr(0, index + 'base64,'.length) + reversedPart;
+
+                document.getElementById('base64Image').src = base64Data;     
+            })
+  
+    </script>
+</body>
+</html>

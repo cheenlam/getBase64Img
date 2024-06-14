@@ -1,0 +1,102 @@
+[
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/encoded_1.jpg",
+        "name" : "測試圖片00",
+        "reversal" : true
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_01.jpg",
+        "name" : "測試圖片01",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_02.jpg",
+        "name" : "測試圖片02",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_03.jpg",
+        "name" : "測試圖片03",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_04.jpg",
+        "name" : "測試圖片04",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_05.jpg",
+        "name" : "測試圖片05",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_06.jpg",
+        "name" : "測試圖片06",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_07.jpg",
+        "name" : "測試圖片07",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_08.jpg",
+        "name" : "測試圖片08",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_09.jpg",
+        "name" : "測試圖片09",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_10.jpg",
+        "name" : "測試圖片10",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_11.jpg",
+        "name" : "測試圖片11",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_12.jpg",
+        "name" : "測試圖片12",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_13.jpg",
+        "name" : "測試圖片13",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_14.jpg",
+        "name" : "測試圖片14",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_15.jpg",
+        "name" : "測試圖片15",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_16.jpg",
+        "name" : "測試圖片16",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_17.jpg",
+        "name" : "測試圖片17",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_18.jpg",
+        "name" : "測試圖片18",
+        "reversal" : false
+    },
+    {
+        "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_19.jpg",
+        "name" : "測試圖片19",
+        "reversal" : false
+    }
+]
