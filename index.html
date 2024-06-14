@@ -38,10 +38,19 @@
                     const res = await axios.get("json/list.json");
                     
                     list.value = res.data;
+
+                    // #1
                     for(let i of list.value){
                         i.base64 = await convertImg(i.src , i.reversal);
                         i.ckimg = true;
                     } 
+
+                    // #2
+                    // const promises = list.value.map(async (item) => {
+                    //     item.base64 = await convertImg(item.src, item.reversal);
+                    //     item.ckimg = true;
+                    // });
+                    // await Promise.all(promises);
                 }
 
                 async function convertImg(fileUrl , reversal) {
