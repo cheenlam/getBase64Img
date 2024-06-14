@@ -1,8 +1,8 @@
 [
     {
-        "src" : "https://api4.hitvdemo.com/upload/image/encoded_1.tiff",
+        "src" : "https://api4.hitvdemo.com/upload/image/0a00de3bdc1afad43f8faa1c80907410.tiff",
         "name" : "測試圖片00",
-        "reversal" : true
+        "reversal" : false
     },
     {
         "src" : "https://api4.hitvdemo.com/upload/image/testBase64/test_01.tiff",

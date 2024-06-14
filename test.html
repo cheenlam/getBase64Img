@@ -10,7 +10,7 @@
 
     <script>
         // const fileUrl = 'https://api4.hitvdemo.com/upload/image/JUQ774_reversal.jpg';
-        const fileUrl = 'test_01.jpg';
+        const fileUrl = '222.tiff';
         fetch(fileUrl)
             .then(response => {
                 return response.text(); 
@@ -20,7 +20,7 @@
                 const reversedPart = base64Data.substr(index + 'base64,'.length).split('').reverse().join('');
                 const reversedData = base64Data.substr(0, index + 'base64,'.length) + reversedPart;
 
-                document.getElementById('base64Image').src = base64Data;     
+                document.getElementById('base64Image').src = reversedData;     
             })
   
     </script>
